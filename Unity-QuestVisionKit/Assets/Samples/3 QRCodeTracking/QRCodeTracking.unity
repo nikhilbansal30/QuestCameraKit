@@ -7719,6 +7719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1354100551}
   - component: {fileID: 1354100550}
+  - component: {fileID: 1354100552}
   m_Layer: 0
   m_Name: '[Colocation] AlignmentManager'
   m_TagString: Untagged
@@ -7754,6 +7755,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1354100552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354100549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c888e05810933478a078b7b5277c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointPrefab: {fileID: 1853468113864384698, guid: ca016c74d8de24946a85f6e6b629adc4, type: 3}
 --- !u!1 &1364350286
 GameObject:
   m_ObjectHideFlags: 0
@@ -9952,29 +9966,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3180484904461471006, guid: f8946cdaea9aa4415ba3d25b33c16b9c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1727416011}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8946cdaea9aa4415ba3d25b33c16b9c, type: 3}
---- !u!1 &1727416010 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3180484904461471006, guid: f8946cdaea9aa4415ba3d25b33c16b9c, type: 3}
-  m_PrefabInstance: {fileID: 1727416009}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1727416011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727416010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c888e05810933478a078b7b5277c4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pointPrefab: {fileID: 1853468113864384698, guid: ca016c74d8de24946a85f6e6b629adc4, type: 3}
 --- !u!1 &1731712945
 GameObject:
   m_ObjectHideFlags: 0
