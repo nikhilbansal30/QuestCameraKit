@@ -45,4 +45,14 @@ public class MarkerPool : MonoBehaviour
         Debug.LogWarning("No available marker in pool!");
         return null;
     }
+
+    public GameObject GetActiveMarker()
+    {
+        foreach (var marker in _pool)
+        {
+            if (marker.activeSelf) return marker;
+        }
+        Debug.LogWarning("No available marker in pool!");
+        return null;
+    }
 }

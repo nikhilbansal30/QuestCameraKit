@@ -3224,15 +3224,7 @@ MonoBehaviour:
   resetHmdPoseOnRelease: 1
   resetHmdPoseByMiddleMouseButton: 1
   activateKeys: 3201000031010000
-  activateKeyBindings:
-  - <Keyboard>/leftCtrl
-  - <Keyboard>/rightCtrl
-  - <Keyboard>/f1
   pitchKeys: 3401000033010000
-  pitchKeyBindings:
-  - <Keyboard>/leftAlt
-  - <Keyboard>/rightAlt
-  - <Keyboard>/f2
 --- !u!114 &553221845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7717,6 +7709,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1637744436}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1354100549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354100551}
+  - component: {fileID: 1354100550}
+  m_Layer: 0
+  m_Name: '[Colocation] AlignmentManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1354100550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354100549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3e2ffbf2e2fe743b030a708abf9cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anchorPrefab: {fileID: 604503658573956138, guid: ad7b327ca94ab3a4286fcf1783f0a5ac, type: 3}
+--- !u!4 &1354100551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354100549}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1364350286
 GameObject:
   m_ObjectHideFlags: 0
@@ -9904,6 +9941,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1107174352770321070, guid: f8946cdaea9aa4415ba3d25b33c16b9c, type: 3}
+      propertyPath: poolSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3180484904461471006, guid: f8946cdaea9aa4415ba3d25b33c16b9c, type: 3}
       propertyPath: m_Name
       value: QRCodeScanner
@@ -9911,8 +9952,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3180484904461471006, guid: f8946cdaea9aa4415ba3d25b33c16b9c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1727416011}
   m_SourcePrefab: {fileID: 100100000, guid: f8946cdaea9aa4415ba3d25b33c16b9c, type: 3}
+--- !u!1 &1727416010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3180484904461471006, guid: f8946cdaea9aa4415ba3d25b33c16b9c, type: 3}
+  m_PrefabInstance: {fileID: 1727416009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1727416011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727416010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c888e05810933478a078b7b5277c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointPrefab: {fileID: 1853468113864384698, guid: ca016c74d8de24946a85f6e6b629adc4, type: 3}
 --- !u!1 &1731712945
 GameObject:
   m_ObjectHideFlags: 0
@@ -11584,3 +11646,4 @@ SceneRoots:
   - {fileID: 911098802}
   - {fileID: 2120672013}
   - {fileID: 1727416009}
+  - {fileID: 1354100551}
