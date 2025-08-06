@@ -65,11 +65,11 @@ public class AlignmentManager : NetworkBehaviour
 
     private void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Three))
+        if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
         {
             PlaceAnchorAtRoot();
         }
-        else if (OVRInput.GetDown(OVRInput.Button.Two))
+        else if (OVRInput.GetDown(OVRInput.RawButton.X))
         {
             OnAlignButtonPressed();
         }
