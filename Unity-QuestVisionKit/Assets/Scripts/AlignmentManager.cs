@@ -63,6 +63,14 @@ public class AlignmentManager : NetworkBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (OVRInput.GetDown(OVRInput.Button.Two))
+        {
+            OnAlignButtonPressed();
+        }
+    }
+
     public void AddQRPoint(Vector3 position)
     {
         _QRPointPositions.Add(position);

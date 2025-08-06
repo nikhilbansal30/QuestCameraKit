@@ -1106,7 +1106,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   colocationAnchor: {fileID: 0}
-  automaticAlignment: 1
+  automaticAlignment: 0
 --- !u!4 &1354100551
 Transform:
   m_ObjectHideFlags: 0
