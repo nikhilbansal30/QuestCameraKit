@@ -39,6 +39,7 @@ public class NetworkDiscoveryConnection : MonoBehaviour
     }
 
     // LAN Host
+    [ContextMenu("Start host")]
     public void StartHost()
     {
         discoveredServers.Clear();
@@ -49,7 +50,7 @@ public class NetworkDiscoveryConnection : MonoBehaviour
     }
 
 
-
+    [ContextMenu("Start client")]
     public void StartClient()
     {
         FindServers();
