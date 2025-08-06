@@ -76,8 +76,7 @@ public class AlignmentManager : NetworkBehaviour
 
             Vector3 direction = (pointA - pointB).normalized;
 
-            Quaternion rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up); // default
-            rotation = Quaternion.FromToRotation(Vector3.right, direction);
+            Quaternion rotation = Quaternion.LookRotation(direction);
 
             StartCoroutine(WaitForAnchorToLocalize(midpoint, rotation));
         }
