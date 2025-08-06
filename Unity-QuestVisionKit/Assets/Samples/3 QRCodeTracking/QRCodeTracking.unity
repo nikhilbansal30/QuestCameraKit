@@ -1101,7 +1101,7 @@ MonoBehaviour:
   syncInterval: 0
   anchorPrefab: {fileID: 604503658573956138, guid: ad7b327ca94ab3a4286fcf1783f0a5ac, type: 3}
   player: {fileID: 1354094686}
-  playerHands: {fileID: 0}
+  playerHands: {fileID: 1849376351}
   onAlign:
     m_PersistentCalls:
       m_Calls: []
@@ -1233,6 +1233,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8946cdaea9aa4415ba3d25b33c16b9c, type: 3}
+--- !u!4 &1849376351 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4628733740971023418, guid: f54012181eacade4ea242c65f804720f, type: 3}
+  m_PrefabInstance: {fileID: 1354094685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1972271975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2483171112401766342, guid: f54012181eacade4ea242c65f804720f, type: 3}

@@ -78,7 +78,7 @@ public class AlignmentManager : NetworkBehaviour
 
             Quaternion rotation = Quaternion.LookRotation(direction);
 
-            WaitForAnchorToLocalize(midpoint, rotation);
+            StartCoroutine(WaitForAnchorToLocalize(midpoint, rotation));
         }
     }
 
@@ -146,8 +146,6 @@ public class AlignmentManager : NetworkBehaviour
 
     IEnumerator WaitForAnchorToLocalize(Vector3 centre, Quaternion rotation)
     {
-
-
 
         if (colocationAnchor)
         {
