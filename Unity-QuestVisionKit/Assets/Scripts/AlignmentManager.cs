@@ -84,7 +84,11 @@ public class AlignmentManager : NetworkBehaviour
 
             Vector3 direction = (pointA - pointB).normalized;
 
-            Quaternion rotation = Quaternion.LookRotation(direction);
+            // Quaternion rotation = Quaternion.LookRotation(direction);
+
+            //     //Aligning x-axis from right to left vector
+            Quaternion rotation = Quaternion.FromToRotation(Vector3.right, direction);
+            rotation.eulerAngles = new Vector3(0f, rotation.eulerAngles.y, 0f);
 
             StartCoroutine(WaitForAnchorToLocalize(midpoint, rotation));
         }
