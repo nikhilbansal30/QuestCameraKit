@@ -1107,7 +1107,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  anchorPrefab: {fileID: 604503658573956138, guid: ad7b327ca94ab3a4286fcf1783f0a5ac, type: 3}
+  anchorPrefab: {fileID: 1978002011806910258, guid: 90d03b0df68494b429723cf4e84cbb65, type: 3}
   leftPlacementRoot: {fileID: 1121505677}
   rightPlacementRoot: {fileID: 171438204}
   offsetForQuest2Controller: {fileID: 1522261301}
