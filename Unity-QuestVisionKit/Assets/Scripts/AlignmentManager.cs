@@ -13,11 +13,11 @@ public class AlignmentManager : NetworkBehaviour
     [SerializeField]
     public GameObject anchorPrefab;
 
-    // [SerializeField]
-    // private Transform leftPlacementRoot, rightPlacementRoot;
+    [SerializeField]
+    private Transform leftPlacementRoot, rightPlacementRoot;
 
-    // [SerializeField]
-    // public Transform offsetForQuest2Controller;
+    [SerializeField]
+    public Transform offsetForQuest2Controller;
 
     [SerializeField]
     private Transform player;
@@ -65,7 +65,11 @@ public class AlignmentManager : NetworkBehaviour
 
     private void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Two))
+        if (OVRInput.GetDown(OVRInput.Button.Three))
+        {
+            PlaceAnchorAtRoot();
+        }
+        else if (OVRInput.GetDown(OVRInput.Button.Two))
         {
             OnAlignButtonPressed();
         }
@@ -102,40 +106,40 @@ public class AlignmentManager : NetworkBehaviour
 
 
 
-    // public void PlaceAnchorAtRoot()
-    // {
-    //     // if (isSpawningAnchor) return;
-    //     isSpawningAnchor = true;
-    //     //Calculating centre to position at the centre of left and right controller
-    //     Vector3 centre = (leftPlacementRoot.position + rightPlacementRoot.position) / 2;
-    //     centre += rightPlacementRoot.transform.forward * offsetForQuest2Controller.transform.localPosition.z; //applying offset to fill the gap between the anchors of client and master client
-    //     Vector3 rotationVector = (rightPlacementRoot.position - leftPlacementRoot.position);
+    public void PlaceAnchorAtRoot()
+    {
+        // if (isSpawningAnchor) return;
+        isSpawningAnchor = true;
+        //Calculating centre to position at the centre of left and right controller
+        Vector3 centre = (leftPlacementRoot.position + rightPlacementRoot.position) / 2;
+        centre += rightPlacementRoot.transform.forward * offsetForQuest2Controller.transform.localPosition.z; //applying offset to fill the gap between the anchors of client and master client
+        Vector3 rotationVector = (rightPlacementRoot.position - leftPlacementRoot.position);
 
 
-    //     if (colocationAnchor)
-    //     {
-    //         colocationAnchor.GetComponent<OVRSpatialAnchor>().Erase((_, isSuccessful) =>
-    //     {
-    //         if (isSuccessful)
-    //             Destroy(colocationAnchor.gameObject);
+        if (colocationAnchor)
+        {
+            colocationAnchor.GetComponent<OVRSpatialAnchor>().Erase((_, isSuccessful) =>
+        {
+            if (isSuccessful)
+                Destroy(colocationAnchor.gameObject);
 
-    //     });
+        });
 
-    //     }
+        }
 
-    //     //Aligning x-axis from right to left vector
-    //     Quaternion rotation = Quaternion.FromToRotation(Vector3.right, rotationVector);
-    //     rotation.eulerAngles = new Vector3(0f, rotation.eulerAngles.y, 0f);
+        //Aligning x-axis from right to left vector
+        Quaternion rotation = Quaternion.FromToRotation(Vector3.right, rotationVector);
+        rotation.eulerAngles = new Vector3(0f, rotation.eulerAngles.y, 0f);
 
-    //     //Rotating anchor of client 180 degrees so that the rotation match with master client
-    //     if (!isServer && NetworkClient.isConnected)
-    //     {
-    //         rotation.eulerAngles = new Vector3(0f, rotation.eulerAngles.y + 180f, 0f);
-    //     }
+        //Rotating anchor of client 180 degrees so that the rotation match with master client
+        if (!isServer && NetworkClient.isConnected)
+        {
+            rotation.eulerAngles = new Vector3(0f, rotation.eulerAngles.y + 180f, 0f);
+        }
 
-    //     StartCoroutine(WaitForAnchorToLocalize(centre, rotation));
+        StartCoroutine(WaitForAnchorToLocalize(centre, rotation));
 
-    // }
+    }
 
     // [Server]
     // private void SpawnCube()

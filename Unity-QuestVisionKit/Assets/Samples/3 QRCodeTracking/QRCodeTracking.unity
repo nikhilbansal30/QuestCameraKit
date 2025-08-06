@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &137528992 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5661700860448616192, guid: f54012181eacade4ea242c65f804720f, type: 3}
+  m_PrefabInstance: {fileID: 1354094685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &171438204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8193728870774061072, guid: f54012181eacade4ea242c65f804720f, type: 3}
@@ -1049,7 +1054,10 @@ PrefabInstance:
     - {fileID: 8092570672683494507, guid: f54012181eacade4ea242c65f804720f, type: 3}
     - {fileID: 2241459140795588321, guid: f54012181eacade4ea242c65f804720f, type: 3}
     - {fileID: 4543456757522008391, guid: f54012181eacade4ea242c65f804720f, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5661700860448616192, guid: f54012181eacade4ea242c65f804720f, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1522261301}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3642352042163518208, guid: f54012181eacade4ea242c65f804720f, type: 3}
       insertIndex: -1
@@ -1100,6 +1108,9 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   anchorPrefab: {fileID: 604503658573956138, guid: ad7b327ca94ab3a4286fcf1783f0a5ac, type: 3}
+  leftPlacementRoot: {fileID: 1121505677}
+  rightPlacementRoot: {fileID: 171438204}
+  offsetForQuest2Controller: {fileID: 1522261301}
   player: {fileID: 1400170638}
   playerHands: {fileID: 677161501}
   onAlign:
@@ -1157,6 +1168,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2483171112402263010, guid: f54012181eacade4ea242c65f804720f, type: 3}
   m_PrefabInstance: {fileID: 1354094685}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1522261300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522261301}
+  m_Layer: 0
+  m_Name: Offset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1522261301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522261300}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0367}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137528992}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642381383 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3642352042163518208, guid: f54012181eacade4ea242c65f804720f, type: 3}
